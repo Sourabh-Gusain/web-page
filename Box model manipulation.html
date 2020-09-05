@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box model manipulation</title>
+    <style>
+    /*Relative units*/
+    /*This is more useful*/
+        div{
+             width: 50%; /* 1264 * 0.5 = 632px */
+             border: 1px solid black;
+           }
+    /*Absolute units*/
+        p{width:800px;}
+
+    /*The max-width and min-width units has been set.*/
+    /*Now it will not go above the 500px nor below the 300px.*/
+       div{ max-width: 500px;
+            min-width: 300px;
+           }
+    /*padding is the space between the content and the box borders.*/
+       div{
+            padding: 20px;
+            }
+    /*we can also set all directions values for padding.
+        padding-top: 20px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-left: 60px; */
+
+    /*short way to do this*/
+    /*If we not given left side units it will automatically take the opposite site value as left,
+     same condition applied for all direction*/
+
+        div{
+             padding: 20px 40px 10px 60px;
+            }
+
+    /*Height units usually given in px(absolute units)*/
+    /*The div is going to be 100px tall*/
+        div{height:100px;}
+
+    /*border units manipulation*/
+        div{
+            border:1px solid black; /*short hand way*/
+            }
+        div{
+            border-left: 5px dashed red; /*long hand way*/
+            border-width: 20px;
+            border-right-style: double;
+            }
+    /*margin is the space between the contents of the page.*/
+        div{
+            margin: 20px; /*short hand way*/
+            }
+        div{
+            margin-top: 20px; /*long hand way*/
+            margin-right: 0;
+            margin-bottom: 40px;
+            margin-left: 0;
+            }
+        div{
+            margin: 20px 0 40px 0; /*smart way for long hand*/
+            }
+    </style>
+</head>
+    <body>
+    <h1>Box model manipulation</h1>
+        <div>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+        </div>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+        </p>
+
+    </body>
+</html>
